@@ -19,6 +19,9 @@
 		193CD387180F9277004C7A99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193CD36F180F9277004C7A99 /* UIKit.framework */; };
 		193CD38F180F9277004C7A99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 193CD38D180F9277004C7A99 /* InfoPlist.strings */; };
 		193CD391180F9277004C7A99 /* Oct17Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 193CD390180F9277004C7A99 /* Oct17Tests.m */; };
+		193CD39C18107110004C7A99 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 193CD39B18107110004C7A99 /* View.m */; };
+		193CD39E18107228004C7A99 /* Icon57*57.png in Resources */ = {isa = PBXBuildFile; fileRef = 193CD39D18107228004C7A99 /* Icon57*57.png */; };
+		193CD3A018107240004C7A99 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 193CD39F18107240004C7A99 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		193CD38C180F9277004C7A99 /* Oct17Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Oct17Tests-Info.plist"; sourceTree = "<group>"; };
 		193CD38E180F9277004C7A99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		193CD390180F9277004C7A99 /* Oct17Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Oct17Tests.m; sourceTree = "<group>"; };
+		193CD39A18107110004C7A99 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		193CD39B18107110004C7A99 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		193CD39D18107228004C7A99 /* Icon57*57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon57*57.png"; sourceTree = "<group>"; };
+		193CD39F18107240004C7A99 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				193CD37A180F9277004C7A99 /* Oct17AppDelegate.h */,
+				193CD39A18107110004C7A99 /* View.h */,
+				193CD39B18107110004C7A99 /* View.m */,
 				193CD37B180F9277004C7A99 /* Oct17AppDelegate.m */,
 				193CD37D180F9277004C7A99 /* Images.xcassets */,
 				193CD372180F9277004C7A99 /* Supporting Files */,
@@ -118,6 +127,8 @@
 		193CD372180F9277004C7A99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				193CD39F18107240004C7A99 /* Default.png */,
+				193CD39D18107228004C7A99 /* Icon57*57.png */,
 				193CD373180F9277004C7A99 /* Oct17-Info.plist */,
 				193CD374180F9277004C7A99 /* InfoPlist.strings */,
 				193CD377180F9277004C7A99 /* main.m */,
@@ -192,6 +203,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Computerlab;
 				TargetAttributes = {
+					193CD367180F9277004C7A99 = {
+						DevelopmentTeam = BWTX4R35UT;
+					};
 					193CD382180F9277004C7A99 = {
 						TestTargetID = 193CD367180F9277004C7A99;
 					};
@@ -220,8 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193CD39E18107228004C7A99 /* Icon57*57.png in Resources */,
 				193CD376180F9277004C7A99 /* InfoPlist.strings in Resources */,
 				193CD37E180F9277004C7A99 /* Images.xcassets in Resources */,
+				193CD3A018107240004C7A99 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +258,7 @@
 			files = (
 				193CD378180F9277004C7A99 /* main.m in Sources */,
 				193CD37C180F9277004C7A99 /* Oct17AppDelegate.m in Sources */,
+				193CD39C18107110004C7A99 /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Oct17/Oct17-Prefix.pch";
 				INFOPLIST_FILE = "Oct17/Oct17-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +393,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Oct17/Oct17-Prefix.pch";
 				INFOPLIST_FILE = "Oct17/Oct17-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -442,6 +465,7 @@
 				193CD396180F9277004C7A99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		193CD397180F9277004C7A99 /* Build configuration list for PBXNativeTarget "Oct17Tests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +474,7 @@
 				193CD399180F9277004C7A99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
